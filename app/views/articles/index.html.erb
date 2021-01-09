@@ -1,0 +1,15 @@
+<h1>Articles#index</h1>
+<p>Find me in app/views/articles/index.html.erb</p>
+<h2>Listado de Articulos </h2>
+<ul>
+  <% @articles.each do |article| %>
+    <li> Titulo: <%= article.title %> </li>
+    <li> <%= article.content %> </li>
+    <li><%= link_to("Modificar Artículo", "/articles/#{article.id}/edit") %></li>
+    <li><%= link_to("Borrar artículo", "/articles/#{article.id}", method: :delete) %></li>
+    <p>  </p>
+    <p> </p>
+  <% end %>
+</ul>
+
+<%= link_to("Nueva Artículo?", "/articles/new") %>
